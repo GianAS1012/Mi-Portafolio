@@ -5,7 +5,7 @@
   <!-- PORTADA -->
   <header>
     <img src="https://via.placeholder.com/120" alt="Foto de perfil">
-    <h1>[Tu Nombre]</h1>
+    <h1>Gian Alessandro</h1>
     <h3>Estudiante de Ingeniería de Sistemas - UNCP</h3>
   </header>
 
