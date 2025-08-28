@@ -79,7 +79,7 @@
   <!-- SOBRE MÍ -->
   <section>
     <h2>Sobre mí</h2>
-    <p>Hola, soy [Tu Nombre], estudiante de Ingeniería de Sistemas en la Universidad Nacional del Centro del Perú. 
+    <p>Hola, soy Gian Alessandro, estudiante de Ingeniería de Sistemas en la Universidad Nacional del Centro del Perú. 
        Me interesa el desarrollo web, la gestión de proyectos y la innovación tecnológica. 
        Este portafolio recopila mis aprendizajes y proyectos.</p>
   </section>
