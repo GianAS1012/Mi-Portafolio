@@ -12,7 +12,7 @@
   <!-- SOBRE MÍ -->
   <section>
     <h2>Sobre mí</h2>
-    <p>Hola, soy Gian Alessandro, estudiante de Ingeniería de Sistemas en la Universidad Nacional del Centro del Perú. 
+    <p>Hola, soy Gian Alessandro Janampa Choccelahua, estudiante de Ingeniería de Sistemas en la Universidad Nacional del Centro del Perú. 
        Me interesa el desarrollo web, la gestión de proyectos y la innovación tecnológica. 
        Este portafolio recopila mis aprendizajes y proyectos.</p>
   </section>
@@ -28,6 +28,11 @@
       <h3>Proyecto 2 - Plataforma Web</h3>
       <p>Diseño de una web para artesanos de Junín, facilitando la venta en línea de sus productos.</p>
     </div>
+    <div class="proyecto">
+      <h3>Proyecto 2 - Plataforma Web</h3>
+      <p>Desarrollo de un Sitio Web para la Exploración del Patrimonio Turístico y Cultural en la Provincia de Chupaca.</p>
+    </div>
+    
   </section>
 
   <!-- BIBLIOGRAFÍA -->
