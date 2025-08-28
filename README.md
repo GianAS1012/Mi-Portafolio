@@ -30,26 +30,6 @@
     </div>
   </section>
 
-  <!-- CUADERNO SEMANAL -->
-  <section>
-    <h2>Cuaderno Semanal</h2>
-    <h3>Semana 1</h3>
-    <p>📌 Definiciones aprendidas, ejercicios de laboratorio y reflexión: <i>¿Qué aprendí? ¿Cómo aprendí?</i></p>
-
-    <h3>Semana 2</h3>
-    <p>📌 Nuevos conceptos, prácticas y reflexiones.</p>
-
-    <h3>Semana 3</h3>
-    <p>📌 Continuación de aprendizajes y ejercicios realizados.</p>
-  </section>
-
-  <!-- REFLEXIÓN FINAL -->
-  <section>
-    <h2>Reflexión Final</h2>
-    <p>Durante este curso aprendí a documentar mi proceso de aprendizaje, aplicar GitHub Pages 
-       para la creación de sitios web y mejorar mis habilidades en desarrollo web.</p>
-  </section>
-
   <!-- BIBLIOGRAFÍA -->
   <section>
     <h2>Bibliografía</h2>
