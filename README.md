@@ -23,9 +23,9 @@
 El presente portafolio académico recopila mi proceso de aprendizaje y desarrollo dentro del curso **Desarrollo de Aplicaciones Web**, a lo largo de seis semanas de trabajo práctico.  
 Cada sección documenta los **temas desarrollados**, **objetivos específicos** y **reflexiones personales** que reflejan mi avance en el dominio de herramientas, lenguajes y frameworks fundamentales para el desarrollo web moderno.
 
->Institución                 | Universidad Nacional del Centro del Perú   |
+>Universidad                 | Universidad Nacional del Centro del Perú   |
 >----------------------------|--------------------------------------------|
->**Programa de Estudios:**   | Ingeniería de Sistemas e Informática       |
+>**Facultad:**   | Ingeniería de Sistemas e Informática       |
 >**Asignatura:**             | Desarrollo de Aplicaciones Web             |
 >**Docente:**                | Jaime Suasnábar Terrel                     |
 >**Alumno:**                 | Gian Alessandro Janampa Choccelahua        |
