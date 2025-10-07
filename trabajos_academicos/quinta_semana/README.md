@@ -38,3 +38,54 @@ En conjunto, esta semana permitió **sentar las bases para el desarrollo con fra
 Instalar Vite mediante:
 ```bash
 npm create vite@latest nombre-proyecto
+```
+Seleccionar la plantilla **React** y configurar el entorno con:
+```bash
+cd nombre-proyecto
+npm install
+npm run dev
+```
+Verificar que el proyecto levante correctamente en `http://localhost:5173`.
+
+**Ejercicio 5.2 — Exploración de estructura React/Vite:**  
+Analizar los archivos generados (`main.jsx`, `App.jsx`, `index.html`) y modificar el contenido para incluir un componente propio.
+
+**Ejercicio 5.3 — Introducción a Next.js:**  
+Instalar un proyecto Next.js con:
+```bash
+npx create-next-app@latest
+```
+Ejecutar en local (`npm run dev`) y explorar el comportamiento del enrutamiento por carpetas.
+
+**Ejercicio 5.4 — Comparativa práctica:**  
+Documentar diferencias en el arranque, estructura de archivos, y rendimiento entre un proyecto creado con **Vite** y uno con **Next.js**.
+
+---
+
+## 🧩 Conclusión
+Vite se consolida como una herramienta moderna y ligera para el desarrollo front-end, facilitando la creación rápida de entornos React con tiempos mínimos de compilación.  
+Por su parte, **Next.js** ofrece un ecosistema más completo orientado al **renderizado híbrido**, ideal para aplicaciones escalables y optimizadas.  
+Ambas tecnologías permiten un flujo de trabajo más ágil, productivo y adaptable a las necesidades actuales del desarrollo web profesional.
+
+---
+
+## 🪞 Reflexión
+**¿Qué he aprendido?**  
+He aprendido a crear proyectos modernos con **Vite**, comprender cómo estructura sus módulos, y a ejecutar aplicaciones React y Next.js en entorno local.  
+También entendí la diferencia entre una **SPA (Single Page Application)** y una aplicación **SSR (Server Side Rendered)**, lo que me da una visión más clara de los tipos de proyectos web actuales.
+
+**¿Cómo he aprendido?**  
+A través de la instalación guiada, el análisis de carpetas generadas, la práctica en el entorno local y la comparación de rendimiento entre Vite y otras herramientas tradicionales.  
+La experimentación directa con React y Next.js me permitió visualizar su potencial en proyectos reales.
+
+---
+
+## 📚 Bibliografía
+>Universidad                |Universidad Nacional del Centro del Perú   |
+>-------------------------  | ------------------------------            |
+>**Facultad:**              | Ingeniería de Sistemas                    |
+>**Asignatura:**            | Desarrollo de Aplicaciones Web            |
+>**Docente:**               | Jaime Suasnábar Terrel                    |
+>**Alumna:**                | Gian Alessandro Janampa Choccelahua       |
+>**Semestre:**              | IX                                        |
+---
