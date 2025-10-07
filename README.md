@@ -12,7 +12,7 @@
   <section>
     <h2>Sobre mí</h2>
     <p>Hola, soy Gian Alessandro Janampa Choccelahua, estudiante de Ingeniería de Sistemas en la Universidad Nacional del Centro del Perú. 
-       Me interesa el desarrollo web, la gestión de proyectos y la innovación tecnológica. 
+       Me interesa el desarrollo de software, programación, bases de datos, redes y gestión de proyectos. Me enfoco en aplicar habilidades técnicas y analíticas para la resolución de problemas. Busco oportunidades para seguir aprendiendo y contribuir en proyectos tecnológicos que impulsen la innovación y eficiencia.
        Este portafolio recopila mis aprendizajes y proyectos.</p>
   </section>
 
