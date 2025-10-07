@@ -26,11 +26,11 @@ Este aprendizaje sienta las bases para un trabajo ordenado y profesional en proy
 ---
 
 ## 🧠 Ejercicios
-**Ejercicio 1.1:** Configurar entorno de desarrollo (instalación de Visual Studio Code, Git y extensión GitHub).  
-**Ejercicio 1.2:** Crear un repositorio local e inicializarlo con `git init`.  
-**Ejercicio 1.3:** Realizar el primer *commit* con un archivo README.md.  
-**Ejercicio 1.4:** Conectar el repositorio local con GitHub usando `git remote add origin`.  
-**Ejercicio 1.5:** Subir los cambios al repositorio remoto mediante `git push`.  
+**Ejercicio:** Configurar entorno de desarrollo (instalación de Visual Studio Code, Git y extensión GitHub).  
+**Ejercicio:** Crear un repositorio local e inicializarlo con `git init`.  
+**Ejercicio:** Realizar el primer *commit* con un archivo README.md.  
+**Ejercicio:** Conectar el repositorio local con GitHub usando `git remote add origin`.  
+**Ejercicio:** Subir los cambios al repositorio remoto mediante `git push`.  
 
 ---
 
@@ -46,14 +46,14 @@ He aprendido a configurar mi entorno de trabajo correctamente y a usar los coman
 **¿Cómo he aprendido?**  
 Mediante la práctica guiada en clase y la exploración de los comandos en terminal, reforzando los conceptos teóricos con ejercicios prácticos. Las explicaciones del docente y la documentación oficial de Git han sido recursos clave para consolidar este aprendizaje.
 
+--- 
+## 📚Bibliografía
+>Universidad                |Universidad Nacional del Centro del Perú   |
+>-------------------------  | ------------------------------            |
+>**Facultad:**  | Ingeniería de Sistemas                    |
+>**Asignatura:**            | Desarrollo de Aplicaciones Web            |
+>**Docente:**               | Jaime Suasnábar Terrel                    |
+>**Alumna:**                | Gian Alessandro Janampa Choccelahua               |
+>**Semestre:**              | IX                                        |
 ---
 
-## 📚 Bibliografía
-**Institución:** Universidad Nacional del Centro del Perú  
-**Programa de Estudios:** Ingeniería de Sistemas  
-**Asignatura:** Desarrollo de Aplicaciones Web  
-**Docente:** Jaime Suasnábar Terrel  
-**Alumno:** Gian Alessandro Janampa Choccelahua  
-**Semestre:** IX  
-
----
