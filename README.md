@@ -4,7 +4,6 @@
 
   <!-- PORTADA -->
   <header>
-    <img src="https://via.placeholder.com/120" alt="Foto de perfil">
     <h1>Gian Alessandro</h1>
     <h3>Estudiante de Ingeniería de Sistemas - UNCP</h3>
   </header>
@@ -17,23 +16,104 @@
        Este portafolio recopila mis aprendizajes y proyectos.</p>
   </section>
 
-  <!-- PROYECTOS -->
-  <section>
-    <h2>Proyectos Concluidos</h2>
-    <div class="proyecto">
-      <h3>Proyecto 1 - Sistema de Gestión</h3>
-      <p>Desarrollo de un sistema CRUD con base de datos para farmacia usando Java y SQL.</p>
-    </div>
-    <div class="proyecto">
-      <h3>Proyecto 2 - Plataforma Web</h3>
-      <p>Diseño de una web para artesanos de Junín, facilitando la venta en línea de sus productos.</p>
-    </div>
-    <div class="proyecto">
-      <h3>Proyecto 2 - Plataforma Web</h3>
-      <p>Desarrollo de un Sitio Web para la Exploración del Patrimonio Turístico y Cultural en la Provincia de Chupaca.</p>
-    </div>
-    
-  </section>
+# Portafolio Académico
+
+## Introducción
+
+El presente portafolio académico recopila mi proceso de aprendizaje y desarrollo dentro del curso **Desarrollo de Aplicaciones Web**, a lo largo de seis semanas de trabajo práctico.  
+Cada sección documenta los **temas desarrollados**, **objetivos específicos** y **reflexiones personales** que reflejan mi avance en el dominio de herramientas, lenguajes y frameworks fundamentales para el desarrollo web moderno.
+
+>Institución                 | Universidad Nacional del Centro del Perú   |
+>----------------------------|--------------------------------------------|
+>**Programa de Estudios:**   | Ingeniería de Sistemas e Informática       |
+>**Asignatura:**             | Desarrollo de Aplicaciones Web             |
+>**Docente:**                | Jaime Suasnábar Terrel                     |
+>**Alumno:**                 | Gian Alessandro Janampa Choccelahua        |
+>**Semestre:**               | IX                                         |
+
+---
+
+## Tabla de Temas y Objetivos
+
+| **Semana** | **Tema**                                                   | **Objetivo**                                                                                                  |
+|-------------|------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| 1 | Introducción y uso de Visual Studio Code                            | Usar adecuadamente Visual Studio Code y sus atajos, aplicando Emmet para optimizar la escritura de HTML y CSS. |
+| 2 | HTML y CSS — Estructuras, estilos y diseño web                      | Aplicar HTML y CSS para estructurar, diseñar y personalizar sitios web, explorando diseño responsive y animaciones. |
+| 3 | Frameworks CSS: Bootstrap y Tailwind                                | Utilizar Bootstrap y Tailwind para crear interfaces modernas, responsivas y con componentes reutilizables.     |
+| 4 | JavaScript: Ruleta y Sorteo de Equipos                              | Desarrollar una aplicación dinámica que combine DOM, eventos de teclado y animaciones para generar una ruleta interactiva. |
+| 5 | Instalación de Vite, React y Next.js                                | Comprender la instalación, configuración y flujo de trabajo de proyectos con Vite, React y Next.js.            |
+| 6 | Fundamentos y Componentes de React                                  | Crear aplicaciones en React usando componentes, props, children y comunicación entre componentes.               |
+
+---
+
+## Reflexiones
+
+### Semana 1 — Introducción y Uso de Visual Studio Code
+Aprendí a manejar **Visual Studio Code** como entorno de desarrollo principal, aprovechando el plugin **Emmet** para escribir código HTML y CSS más rápido.  
+El uso de **atajos de teclado** mejoró significativamente mi productividad, permitiéndome trabajar de forma más fluida y profesional.
+
+---
+
+### Semana 2 — HTML y CSS: Estructuras y Estilos
+Durante esta semana consolidé mis conocimientos de **HTML5 y CSS3**, creando páginas web estructuradas, limpias y visualmente agradables.  
+Aprendí a implementar **diseño responsivo**, aplicar **animaciones CSS** y mejorar la experiencia visual de las interfaces.  
+Esta base fue esencial para poder integrar luego frameworks más avanzados.
+
+---
+
+### Semana 3 — Frameworks CSS: Bootstrap y Tailwind
+Trabajé con **Bootstrap** y **Tailwind CSS**, dos frameworks poderosos que facilitan el diseño web profesional.  
+Con **Bootstrap** comprendí el sistema de grillas y componentes predefinidos.  
+Con **Tailwind**, dominé el uso de clases utilitarias para personalizar cada elemento sin escribir CSS adicional.  
+La práctica incluyó un proyecto con **cards animadas, formularios, sliders RGB y galería responsive**, fortaleciendo mi comprensión del diseño adaptable.
+
+---
+
+### Semana 4 — JavaScript: Ruleta y Sorteo de Equipos
+Esta semana desarrollé una **ruleta interactiva** controlada por **eventos de teclado (F1–F9)**, con **animaciones dinámicas**, **colores aleatorios** y **sorteo automático de equipos**.  
+Aprendí a manipular el **DOM**, crear y modificar elementos en tiempo real, y estructurar funciones en JavaScript de forma modular.  
+El proyecto me permitió comprender cómo combinar lógica, animación y experiencia de usuario en una sola aplicación web.
+
+---
+
+### Semana 5 — Instalación de Vite, React y Next.js
+Exploré el entorno de **Vite**, una herramienta moderna para crear proyectos React y Next.js con alto rendimiento.  
+Aprendí la estructura base de un proyecto React (`main.jsx`, `App.jsx`, `components/`) y el flujo de renderizado de componentes.  
+También entendí las diferencias entre **React tradicional y Next.js**, especialmente en la generación de sitios estáticos y el renderizado del lado del servidor.
+
+---
+
+### Semana 6 — Fundamentos y Componentes de React
+Profundicé en la creación de **componentes funcionales**, el uso de **props**, **children** y la **comunicación entre componentes**.  
+Desarrollé varios ejercicios prácticos, incluyendo:
+- Aplicación con 7 componentes responsivos.  
+- Componentes anidados que reciben y muestran objetos de datos.  
+- Comunicación entre componentes padre e hijo con `useState()`.  
+- Renderizado de listas con el método `map()`.  
+
+Esta práctica reforzó mi dominio del pensamiento modular y la organización del código en proyectos React.
+
+---
+
+## Conclusión General
+
+El curso **Desarrollo de Aplicaciones Web** me permitió integrar conocimientos teóricos y prácticos de diseño, programación y frameworks modernos.  
+Desde las bases de **HTML y CSS**, pasando por la interactividad con **JavaScript**, hasta la modularidad de **React y Next.js**, cada semana representó un paso hacia un desarrollo más profesional y estructurado.  
+
+He aprendido a construir aplicaciones completas, comprendiendo el flujo de datos, la arquitectura por componentes y la importancia del diseño adaptativo.  
+Estos aprendizajes consolidan mi formación como **ingeniero de sistemas** y me preparan para proyectos web más avanzados e innovadores.
+
+---
+
+## 📚 Referencia Institucional
+
+> **Universidad Nacional del Centro del Perú**  
+> Facultad de Ingeniería de Sistemas  
+> Asignatura: *Desarrollo de Aplicaciones Web*  
+> Docente: *Mg. Jaime Suasnábar Terrel*  
+> Alumno: *Gian Alessandro Janampa Choccelahua*  
+> Semestre Académico: *IX*  
+
 
   <!-- BIBLIOGRAFÍA -->
   <section>
@@ -51,135 +131,4 @@
 
 </body>
 </html>
-
-# CAPITULO 2 - Funciones CSS (calc(), clamp(), min(), max())
-
-Las funciones en CSS forman parte de las herramientas modernas que permiten definir valores dinámicos sin necesidad de JavaScript. Su propósito es calcular y ajustar automáticamente propiedades de diseño, lo que hace que las páginas sean más flexibles y responsivas (MDN Web Docs, s. f.).
-
-Estas funciones se interpretan directamente en el navegador y pueden trabajar con unidades mixtas (px, %, vw, rem, etc.), lo que antes requería cálculos manuales o media queries adicionales. Entre las más usadas tenemos:
-
-calc(): permite realizar operaciones matemáticas (+, −, ×, ÷).
-
-min(): selecciona el valor más pequeño entre dos o más opciones.
-
-max(): selecciona el valor más grande entre dos o más opciones.
-
-clamp(): fija un rango mínimo, preferido y máximo en una sola línea.
-
-Estas funciones, combinadas con variables CSS, dan mayor control y eficiencia en proyectos grandes de diseño web.
-
-🔹 Ventajas
-
-Adaptabilidad: ajustan medidas de forma automática según el tamaño del dispositivo.
-
-Simplicidad: reducen la necesidad de usar JavaScript o varias media queries.
-
-Flexibilidad: permiten mezclar diferentes unidades (ejemplo: px con %).
-
-Mantenimiento fácil: facilitan cambios en proyectos grandes y responsivos.
-
-🔹 Ejemplos de código
-
-Ejemplo con calc()
-```css
-div {
-  width: calc(100% - 50px);
-}
-```
-➡ El div ocupará todo el ancho de la página menos 50 píxeles.
-
-Ejemplo con min()
-```css
-div {
-  width: min(70%, 400px);
-}
-```
-➡ El ancho será el menor valor: 70% de la pantalla o 400px.
-
-Ejemplo con max()
-```css
-p {
-  font-size: max(16px, 2vw);
-}
-```
-➡ El texto nunca será más pequeño que 16px, pero crecerá en pantallas grandes.
-
-Ejemplo con clamp()
-```css
-h1 {
-  font-size: clamp(16px, 5vw, 40px);
-}
-```
-➡ El título (h1) será como mínimo 16px, crecerá de forma dinámica (5vw), pero nunca más de 40px.
-
-# CAPITULO 3 - Grid Layout Avanzado (Áreas de grid, auto-fit, auto-fill)
-
-El CSS Grid Layout es un sistema de diseño en dos dimensiones (filas y columnas) que facilita la construcción de interfaces web organizadas y responsivas. A diferencia de Flexbox, que trabaja en una sola dirección (fila o columna), Grid permite controlar simultáneamente ambas dimensiones, ofreciendo mayor precisión y flexibilidad (W3C, s. f.).
-
-Dentro de sus características avanzadas destacan:
-
-grid-template-areas: permite asignar nombres a secciones del layout, lo que mejora la legibilidad y semántica del código.
-
-auto-fit y auto-fill: permiten crear cuadrículas dinámicas donde los elementos se ajustan automáticamente al espacio disponible, sin necesidad de usar múltiples media queries.
-
-Estas propiedades hacen de Grid una herramienta fundamental en proyectos modernos de diseño web, especialmente en páginas con estructuras complejas como dashboards, plantillas de noticias, portfolios o aplicaciones web.
-
-🔹 Ventajas
-
-Organización clara: usar nombres en las áreas facilita la lectura y mantenimiento.
-
-Diseño responsivo: auto-fit y auto-fill ajustan automáticamente el número de columnas.
-
-Mayor control: permite distribuir espacio, alineaciones y relaciones entre elementos de forma precisa.
-
-Escalabilidad: útil para proyectos grandes donde la estructura puede crecer fácilmente.
-
-🔹 Ejemplos de código
-1. Uso de grid-template-areas
-
-Permite asignar nombres a diferentes secciones del layout.
-
-```css
-.container {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "sidebar main"
-    "footer footer";
-  grid-template-columns: 1fr 2fr;
-  gap: 10px;
-}
-
-.header  { grid-area: header;  background: lightblue; }
-.sidebar { grid-area: sidebar; background: lightgreen; }
-.main    { grid-area: main;    background: lightcoral; }
-.footer  { grid-area: footer;  background: lightgray; }
-
-```
-➡ Resultado: el diseño queda dividido en header, sidebar, main y footer de forma clara y ordenada.
-
-2. Uso de auto-fit y auto-fill
-
-Sirven para crear grids responsivos que se adaptan automáticamente.
-```css
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-}
-.item {
-  background: lightseagreen;
-  height: 100px;
-  border-radius: 8px;
-  text-align: center;
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-}
-
-```
-➡ Resultado: las tarjetas se ajustan solas al espacio disponible, evitando el uso de múltiples media queries.
-
-En pantallas grandes → varias columnas.
-
-En pantallas pequeñas → se reducen a 1 o 2 columnas automáticamente.
+se reducen a 1 o 2 columnas automáticamente.
