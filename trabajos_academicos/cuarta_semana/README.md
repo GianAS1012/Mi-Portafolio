@@ -1,4 +1,4 @@
-# Semana 4 — Práctica Calificada 3: Ruleta y Sorteo de Equipos  
+# Semana 4 — JavaScript básico y avanzado (práctica) 
 **JavaScript · DOM · eventos · animaciones**
 
 ---
@@ -77,3 +77,4 @@ La experimentación y la comprensión visual de las transformaciones CSS fueron 
 >**Alumna:**                | Gian Alessandro Janampa Choccelahua       |
 >**Semestre:**              | IX                                        |
 ---
+
