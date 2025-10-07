@@ -1,70 +1,97 @@
-# Semana 3 — Bootstrap y Tailwind (práctica)  
+# Semana 3 — Práctica Calificada 2: Bootstrap y Tailwind CSS  
 **Bootstrap · Tailwind · componentes · utilidades · responsive**
 
 ---
 
-## 🧩 Tema
-**Sistemas de utilidades y componentes; grid y responsive con utilidades.**
+## 🧩 Tema  
+**Sistemas de utilidades y componentes; grid y responsive con Bootstrap y Tailwind.**
 
 ---
 
-## 🎯 Objetivo
-Aplicar los frameworks **Bootstrap** y **Tailwind CSS** en el desarrollo de interfaces web modernas, priorizando la reutilización de componentes, el uso de utilidades predefinidas y la correcta implementación de sistemas de grillas responsivas.  
-Además, poner en práctica el trabajo colaborativo con **Git y GitHub**, aplicando ramas y fusiones de código, como se detalla en la **Práctica Calificada 1**.
+## 🎯 Objetivo  
+Aplicar los frameworks **Bootstrap 5** y **Tailwind CSS** para construir interfaces modernas, responsivas y reutilizables.  
+La práctica busca reforzar el dominio de **componentes predefinidos**, **clases utilitarias** y **estructuras de grillas**, integrando efectos visuales y animaciones en una interfaz completa que simula un proyecto real.
 
 ---
 
-## 💡 ¿Qué hemos aprendido?
-Durante esta semana se consolidó el conocimiento en la **maquetación moderna mediante frameworks CSS**. Aprendimos a emplear los sistemas de **utilidades** y **componentes reutilizables** que ofrecen **Bootstrap** y **Tailwind**, comprendiendo sus diferencias y ventajas:  
+## 💡 ¿Qué hemos aprendido?  
+Durante esta tercera semana se trabajó en la implementación de páginas web usando frameworks CSS modernos.  
+Los principales aprendizajes fueron:
 
-- En **Bootstrap**, utilizamos el sistema de **grid de 12 columnas**, componentes como *cards*, *navbar*, *forms* y *modals*, y clases utilitarias para espaciado, colores y tipografía.  
-- En **Tailwind CSS**, trabajamos con clases funcionales que nos permiten construir diseños personalizados sin escribir CSS adicional, aplicando utilidades como `flex`, `grid`, `p-4`, `bg-blue-500`, `rounded-lg`, entre otras.  
+- **Bootstrap 5**:  
+  - Uso del sistema **grid de 12 columnas** para maquetar contenido.  
+  - Empleo de componentes como **cards**, **navbar**, **buttons** y **forms**.  
+  - Personalización mediante clases de color (`bg-primary`, `text-light`, `rounded`, etc.).  
 
-Asimismo, se aplicó el **trabajo colaborativo con GitHub** a través de la creación de ramas para cada integrante del equipo, la gestión del flujo de trabajo con *merge*, y el envío del enlace final del repositorio, siguiendo las indicaciones del docente.  
+- **Tailwind CSS**:  
+  - Comprensión de las **clases utilitarias** para definir directamente estilos (`flex`, `p-4`, `rounded-lg`, `hover:scale-105`, etc.).  
+  - Creación de **interfaces reactivas y minimalistas**.  
+  - Integración de **animaciones** usando transformaciones y transiciones (`rotate`, `scale`, `transition`, `ease-in-out`).  
 
-En la parte práctica, se desarrollaron cuatro archivos principales:  
-- **index.html:** contiene tres *cards* animados que enlazan a cada página de práctica (page01, page02, page03).  
-- **page01.html:** formulario con animaciones y efectos visuales en los campos de texto e interacción con drag & drop para subir imágenes.  
-- **page02.html:** diseño de formulario y *card* con sliders RGB para manipular colores dinámicamente.  
-- **page03.html:** estructura web completa con imágenes, efectos de opacidad y diseño totalmente responsive mediante *media queries* y *flexbox*.  
+- **Estructura modular de páginas**:  
+  - Desarrollo de un **index** principal con tarjetas animadas que giran 180°, enlazando a tres páginas secundarias.  
+  - Cada página contiene un tipo distinto de ejercicio práctico.
 
-Estos ejercicios reforzaron la importancia de la **organización del código**, la **colaboración entre desarrolladores** y la aplicación de **componentes reutilizables** para acelerar el desarrollo de proyectos web reales.
+Este trabajo permitió afianzar las bases del **diseño responsivo y reutilizable**, comprendiendo cómo combinar utilidad, estética y eficiencia en el desarrollo front-end.
 
 ---
 
 ## 🧠 Ejercicios
-**Ejercicio 3.1:** Crear un proyecto en GitHub con tres ramas (una por integrante del equipo) y realizar *merge* final del líder.  
-**Ejercicio 3.2:** Construir `page01.html` con cuatro íconos SVG y un formulario animado con tres *text fields*, un *checkbox* y dos *buttons*.  
-**Ejercicio 3.3:** En `page02.html`, incluir un *card* con sliders RGB y campos numéricos sincronizados para modificar dinámicamente el color.  
-**Ejercicio 3.4:** Diseñar `page03.html` con imágenes, efectos de opacidad y diseño responsive adaptable a cuatro tamaños (`<480px`, `<900px`, `<1200px`, `>1200px`).  
-**Ejercicio 3.5:** Crear un `index.html` con tres *cards animados* que giren 180° y redirijan a las páginas anteriores.  
+
+### 🗂 Estructura general
+- **index.html**  
+  Página principal con **tres cards animados** que giran 180° (sobre ejes X y Y) y redirigen a las páginas `Page1.html`, `Page2.html` y `Page3.html`.  
+  Las animaciones se implementaron con CSS puro, usando `transform` y `transition`, y con una leve perspectiva 3D.  
 
 ---
 
-## 🧩 Conclusión
-El uso de **Bootstrap y Tailwind** representa una evolución significativa en el desarrollo front-end, permitiendo una mayor productividad y consistencia en los proyectos.  
-Gracias a estas herramientas, se pueden crear diseños profesionales con menos código, aprovechando utilidades preconstruidas y adaptando componentes con rapidez.  
-Además, la práctica integró aspectos de **control de versiones y trabajo en equipo**, fortaleciendo las competencias colaborativas requeridas en el ámbito profesional del desarrollo web.
+### 💬 Page 1 — Formulario Animado  
+Implementa un formulario con efectos visuales y animaciones:  
+- Cuatro íconos SVG representativos.  
+- Tres campos de texto con etiquetas flotantes.  
+- Un checkbox y dos botones de acción estilizados con Tailwind.  
+- Efecto de resaltado al foco (`focus:ring`, `focus:border`).  
 
 ---
 
-## 🪞 Reflexión
+### 🎚 Page 2 — Ventana y Card RGB  
+Simula una ventana con **sliders RGB** (rojo, verde, azul) y campos numéricos sincronizados.  
+- Cada slider modifica en tiempo real el color del card.  
+- Se utilizan **eventos JavaScript** y clases de Tailwind (`bg-[rgb(x,y,z)]`) para el render dinámico.  
+
+---
+
+### 🖼 Page 3 — Galería Responsive  
+Demuestra la maquetación con **Flexbox y Grid**:  
+- Galería de imágenes con efecto de opacidad al hover.  
+- Adaptación automática a cuatro rangos de pantalla (`<480px`, `<900px`, `<1200px`, `>1200px`).  
+- Aplicación de transiciones suaves y bordes redondeados.  
+
+---
+
+## 🧩 Conclusión  
+El uso de **Bootstrap y Tailwind CSS** mejora considerablemente la productividad del desarrollo front-end al permitir interfaces coherentes y responsivas sin escribir CSS extenso.  
+Las **cards animadas**, **formularios interactivos** y **efectos visuales** demuestran la versatilidad de estas herramientas y su valor para proyectos reales.  
+Esta práctica integró diseño, animación y funcionalidad, afianzando la capacidad de crear interfaces modernas y adaptativas.  
+
+---
+
+## 🪞 Reflexión  
 **¿Qué he aprendido?**  
-He aprendido a utilizar frameworks modernos como Bootstrap y Tailwind para crear diseños responsivos y estructurados, aprovechando sus utilidades y componentes predefinidos.  
-También comprendí cómo gestionar un proyecto colaborativo con GitHub, creando ramas, realizando merges y subiendo versiones finales del código.
+He aprendido a combinar Bootstrap y Tailwind para construir interfaces responsivas y animadas.  
+También comprendí cómo usar las clases utilitarias para maquetar rápidamente sin necesidad de CSS personalizado.  
 
 **¿Cómo he aprendido?**  
-Mediante la práctica guiada del docente y la ejecución de la **Práctica Calificada 1**, donde cada integrante aplicó los conceptos de HTML, CSS y responsive design.  
-La experiencia de trabajo en equipo, el uso de control de versiones y la construcción de formularios y componentes con utilidades reforzaron mi aprendizaje técnico y mi capacidad para coordinar proyectos en grupo.
+A través de la creación de páginas prácticas, explorando los componentes de Bootstrap y las clases de Tailwind, verificando su comportamiento en diferentes tamaños de pantalla y experimentando con efectos de rotación y transición.  
 
 ---
 
-## 📚 Bibliografía
->Universidad                |Universidad Nacional del Centro del Perú   |
->-------------------------  | ------------------------------            |
->**Facultad:**              | Ingeniería de Sistemas                    |
->**Asignatura:**            | Desarrollo de Aplicaciones Web            |
->**Docente:**               | Jaime Suasnábar Terrel                    |
->**Alumna:**                | Gian Alessandro Janampa Choccelahua       |
->**Semestre:**              | IX                                        |
+## 📚 Bibliografía  
+> Universidad | Universidad Nacional del Centro del Perú  
+> ---------------------- | --------------------------------------  
+> **Facultad:** | Ingeniería de Sistemas  
+> **Asignatura:** | Desarrollo de Aplicaciones Web  
+> **Docente:** | Jaime Suasnábar Terrel  
+> **Alumna:** | Gian Alessandro Janampa Choccelahua  
+> **Semestre:** | IX  
 ---
