@@ -1,61 +1,70 @@
-# Semana 4 — JavaScript, DOM y eventos (Práctica Calificada 2)  
-**interactividad · animación · manipulación DOM**
+# Semana 4 — Práctica Calificada 3: Ruleta y Sorteo de Equipos  
+**JavaScript · DOM · eventos · animaciones**
 
 ---
 
 ## 🧩 Tema
-**Estructuras de interacción con JavaScript, manipulación del DOM, eventos y animaciones dinámicas.**
+**Aplicación interactiva con manipulación del DOM, eventos de teclado y generación aleatoria.**
 
 ---
 
 ## 🎯 Objetivo
-Aplicar los fundamentos del **lenguaje JavaScript** en el desarrollo de páginas web interactivas mediante el manejo del **DOM**, la creación de **eventos dinámicos**, y la integración de animaciones en CSS y Tailwind, reforzando las bases del desarrollo front-end.
+Desarrollar una **aplicación web dinámica** que combine la manipulación del DOM, el uso de **eventos de teclado**, **temporizadores** y **funciones aleatorias** para construir una **ruleta interactiva** y un **sorteo automático de equipos**.  
+La práctica tiene como fin fortalecer el dominio de **JavaScript** aplicado al desarrollo front-end, la organización del código y el control preciso de elementos HTML en tiempo real.
 
 ---
 
 ## 💡 ¿Qué hemos aprendido?
-Durante esta cuarta semana se abordaron los conceptos esenciales de la **programación en JavaScript aplicada al navegador**, aprendiendo a:
+Durante esta cuarta semana se integraron los conocimientos de JavaScript con el manejo visual del DOM, desarrollando una aplicación completa con interacción y animación.  
+Se reforzaron los siguientes aspectos:
 
-- Usar variables, funciones y eventos para **interactuar con los elementos HTML**.  
-- Manipular el DOM con métodos como `getElementById()`, `querySelector()`, `createElement()` y `appendChild()`.  
-- Responder a las acciones del usuario con **eventos** (`onclick`, `mouseover`, `keydown`, etc.).  
-- Crear efectos visuales mediante **transiciones y transformaciones CSS**.  
-- Combinar HTML, CSS y JS para lograr interfaces dinámicas y fluidas.  
-
-Además, se aplicó un enfoque **modular y práctico** en el desarrollo de componentes, dividiendo las tareas en tres ejercicios vinculados desde una página principal.
+- **Creación y modificación dinámica del DOM:** uso de `document.createElement()`, `appendChild()`, `innerHTML`, `querySelector()` y `getElementById()`.  
+- **Eventos de teclado:** detección y respuesta a teclas específicas (F1 a F9) para controlar las acciones principales de la aplicación.  
+- **Manipulación de estilos y animaciones:** aplicación de clases CSS, colores dinámicos, transformaciones y transiciones con `transform` y `rotate()`.  
+- **Uso de estructuras de control y funciones aleatorias:** implementación de `Math.random()` para determinar posiciones, colores y ganadores.  
+- **Gestión modular del código:** separación de funciones para cada tarea (iniciar ruleta, detener, limpiar, generar equipos, etc.).  
+- **Experiencia de usuario (UX):** visualización clara de resultados, animación fluida y respuesta inmediata a las acciones del usuario.
 
 ---
 
 ## 🧠 Ejercicios
 **index.html**  
-Contiene tres **tarjetas animadas** que giran sobre los ejes X e Y al pasar el cursor, cada una enlazando a su respectiva página de práctica.  
-El diseño se basa en **Tailwind CSS**, aplicando `rotateY(180deg)` y `rotateX(180deg)` en el hover:contentReference[oaicite:2]{index=2}.
+Interfaz principal que contiene la estructura base de la aplicación:  
+- Un **textarea** para ingresar los nombres de los participantes.  
+- Un **canvas o contenedor circular** que representa la ruleta.  
+- Una **zona de resultados** donde se muestran los ganadores o equipos generados.  
+- Indicaciones visuales y una leyenda con los **atajos de teclado (F1 a F9)**.
 
-**page01.html**  
-Desarrolla un formulario dinámico con **eventos JavaScript**, validación básica y manipulación del DOM para mostrar o actualizar información de entrada.
+**Funciones implementadas:**
+- **F1:** mostrar/ocultar la ayuda con la guía de funciones.  
+- **F2:** limpiar el área de resultados.  
+- **F3:** generar colores aleatorios para los sectores de la ruleta.  
+- **F4:** dividir los nombres ingresados en el textarea y mostrarlos como sectores.  
+- **F5:** iniciar el giro de la ruleta con animación.  
+- **F6:** detener la ruleta y mostrar el ganador seleccionado.  
+- **F7:** limpiar el textarea.  
+- **F8:** realizar el **sorteo de equipos** distribuyendo los nombres en grupos.  
+- **F9:** reiniciar todo el sistema a su estado inicial.
 
-**page02.html**  
-Contiene interactividad avanzada: listas, estructuras condicionales y actualización visual de datos (por ejemplo, listas tipo bandeja o de mensajes, ajustadas con CSS responsivo):contentReference[oaicite:3]{index=3}.
-
-**page03.html**  
-Ejercicio de integración de **efectos visuales**, manejo de eventos con imágenes y manipulación de clases. Implementa dinámicas de animación y cambio de opacidad en tiempo real.
+Cada acción se activa mediante un evento `keydown` asociado a la tecla correspondiente y ejecuta una función específica que manipula el DOM o los estilos en tiempo real.
 
 ---
 
 ## 🧩 Conclusión
-El uso de **JavaScript junto con Tailwind y CSS** permite crear experiencias visuales más interactivas e intuitivas.  
-A través de esta práctica se consolidó el conocimiento sobre cómo conectar la **lógica del código** con el **comportamiento visual** del usuario, reforzando la importancia del DOM y los eventos en el desarrollo moderno.
+La práctica permitió consolidar los conocimientos sobre **eventos, estructuras de control y manipulación del DOM** a través de un caso práctico y visual.  
+La creación de una ruleta animada y un sorteo automatizado demostró cómo combinar **lógica, diseño y animación** dentro de un mismo entorno, fortaleciendo las competencias en programación interactiva.  
+Además, el uso de atajos de teclado permitió experimentar con **interfaces más accesibles y ágiles**, simulando comportamientos de aplicaciones reales.
 
 ---
 
 ## 🪞 Reflexión
 **¿Qué he aprendido?**  
-He aprendido a conectar la lógica de JavaScript con la estructura HTML y los estilos CSS, generando efectos dinámicos y animaciones al interactuar con los elementos de la interfaz.  
-También comprendí cómo organizar el código en páginas enlazadas para mantener una estructura ordenada y modular.
+He aprendido a integrar eventos de teclado con animaciones, controlando dinámicamente los elementos del DOM para crear una aplicación completamente funcional.  
+También comprendí cómo aplicar estructuras lógicas, ciclos y funciones aleatorias para generar comportamientos interactivos en tiempo real.
 
 **¿Cómo he aprendido?**  
-Mediante la práctica de ejercicios secuenciales (desde animaciones hasta manipulación del DOM) y la experimentación con diferentes eventos, comprobando visualmente los resultados.  
-El trabajo con las páginas enlazadas y Tailwind facilitó la comprensión de las transiciones y efectos de rotación en tiempo real.
+Mediante la práctica guiada del docente, probando cada evento de teclado, depurando el comportamiento de la ruleta y el sorteo, y verificando los resultados en el navegador.  
+La experimentación y la comprensión visual de las transformaciones CSS fueron claves para consolidar mi aprendizaje.
 
 ---
 
