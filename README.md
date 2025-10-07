@@ -105,14 +105,6 @@ Estos aprendizajes consolidan mi formación como **ingeniero de sistemas** y me 
 
 ---
 
-## 📚 Referencia Institucional
-
-> **Universidad Nacional del Centro del Perú**  
-> Facultad de Ingeniería de Sistemas  
-> Asignatura: *Desarrollo de Aplicaciones Web*  
-> Docente: *Mg. Jaime Suasnábar Terrel*  
-> Alumno: *Gian Alessandro Janampa Choccelahua*  
-> Semestre Académico: *IX*  
 
 
   <!-- BIBLIOGRAFÍA -->
@@ -131,4 +123,3 @@ Estos aprendizajes consolidan mi formación como **ingeniero de sistemas** y me 
 
 </body>
 </html>
-se reducen a 1 o 2 columnas automáticamente.
