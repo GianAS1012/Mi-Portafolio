@@ -118,7 +118,7 @@ window.addEventListener('scroll', scrollActive)
 /* ----- DOWLOAND PDF ----- */
 function descargarCV() {
   const link = document.createElement('a');
-  link.href = './public/CV_Gian_JanampaChoccelahua.pdf'; // ruta relativa dentro de docs/
+  link.href = 'https://github.com/GianAS1012/Mi-Portafolio/blob/main/docs/public/CV_Gian_JanampaChoccelahua.pdf'; // ruta relativa dentro de docs/
   link.download = 'CV_Gian_JanampaChoccelahua.pdf';
   link.click();
 }
