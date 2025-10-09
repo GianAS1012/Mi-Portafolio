@@ -118,10 +118,11 @@ window.addEventListener('scroll', scrollActive)
 /* ----- DOWLOAND PDF ----- */
 function descargarCV() {
   const link = document.createElement('a');
-  link.href = 'D:/Pagina_portafolio/public/CV_Gian_JanampaChoccelahua.pdf';  // Reemplaza con la ruta real de tu PDF
-  link.download = 'CV_Gian_JanampaChoccelahua.pdf';  // Reemplaza con el nombre que deseas para el archivo descargado
+  link.href = './public/CV_Gian_JanampaChoccelahua.pdf'; // ruta relativa dentro de docs/
+  link.download = 'CV_Gian_JanampaChoccelahua.pdf';
   link.click();
 }
+
 
 function redireccionarInstagram() {
   window.open('https://www.instagram.com/gian_sd.25/', '_blank');
