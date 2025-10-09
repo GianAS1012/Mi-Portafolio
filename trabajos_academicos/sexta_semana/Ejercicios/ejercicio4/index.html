@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunicación entre Hermanos con React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f3f5f9;
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 14px;
+        width: min(560px, 100%);
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        color: #1f2937;
+      }
+
+      .sibling-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 1.25rem;
+        background: #f9fafb;
+      }
+
+      .sibling-card:nth-child(odd) {
+        background: #eff6ff;
+        border-color: #bfdbfe;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #1d4ed8;
+      }
+
+      input[type='text'] {
+        width: 100%;
+        padding: 0.6rem 0.8rem;
+        border: 1px solid #c1c9d8;
+        border-radius: 8px;
+        font-size: 1rem;
+      }
+
+      input[type='text']:focus {
+        outline: none;
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      button[type='submit'] {
+        background: #2563eb;
+        border: none;
+        color: #fff;
+        padding: 0.75rem 1.4rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      button[type='submit']:hover {
+        background: #1d4ed8;
+      }
+
+      button[type='submit']:disabled {
+        background: #a5b4fc;
+        cursor: not-allowed;
+      }
+
+      .empty-state {
+        margin: 0;
+        color: #6b7280;
+      }
+
+      .data-highlight {
+        display: inline-flex;
+        gap: 0.4rem;
+        font-weight: 600;
+        color: #111827;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/javascript">
+      (function () {
+        if (!window.React || !window.ReactDOM) {
+          var root = document.getElementById('root');
+          root.innerHTML =
+            '<p style="color:#b91c1c;font-weight:bold;">No se pudieron cargar las dependencias de React. Abre este archivo desde un servidor local o verifica tu conexión a internet.</p>';
+          return;
+        }
+
+        var useState = React.useState;
+
+        var SiblingOne = function (props) {
+          var _useState = useState({ nombre: '', apellido: '' }),
+            formValues = _useState[0],
+            setFormValues = _useState[1];
+
+          var handleChange = function (event) {
+            var field = event.target.name;
+            setFormValues(function (prev) {
+              var next = Object.assign({}, prev);
+              next[field] = event.target.value;
+              return next;
+            });
+          };
+
+          var handleSubmit = function (event) {
+            event.preventDefault();
+            var trimmedNombre = formValues.nombre.trim();
+            var trimmedApellido = formValues.apellido.trim();
+
+            if (!trimmedNombre || !trimmedApellido) {
+              return;
+            }
+
+            props.onSend({
+              nombre: trimmedNombre,
+              apellido: trimmedApellido,
+            });
+
+            setFormValues({ nombre: '', apellido: '' });
+          };
+
+          var isDisabled =
+            formValues.nombre.trim().length === 0 ||
+            formValues.apellido.trim().length === 0;
+
+          return React.createElement(
+            'section',
+            { className: 'sibling-card' },
+            React.createElement('h2', null, 'Hermano 1'),
+            React.createElement(
+              'form',
+              { onSubmit: handleSubmit, noValidate: true },
+              React.createElement(
+                'div',
+                { className: 'form-grid' },
+                React.createElement(
+                  'label',
+                  null,
+                  'Nombre',
+                  React.createElement('input', {
+                    type: 'text',
+                    name: 'nombre',
+                    placeholder: 'Ej. Ana',
+                    value: formValues.nombre,
+                    onChange: handleChange,
+                  })
+                ),
+                React.createElement(
+                  'label',
+                  null,
+                  'Apellido',
+                  React.createElement('input', {
+                    type: 'text',
+                    name: 'apellido',
+                    placeholder: 'Ej. González',
+                    value: formValues.apellido,
+                    onChange: handleChange,
+                  })
+                )
+              ),
+              React.createElement(
+                'button',
+                { type: 'submit', disabled: isDisabled },
+                'Compartir datos con hermano 2'
+              )
+            )
+          );
+        };
+
+        var SiblingTwo = function (props) {
+          var data = props.data;
+
+          return React.createElement(
+            'section',
+            { className: 'sibling-card' },
+            React.createElement('h2', null, 'Hermano 2'),
+            data.nombre && data.apellido
+              ? React.createElement(
+                  'p',
+                  null,
+                  'Recibí los datos de mi hermano:',
+                  ' ',
+                  React.createElement(
+                    'span',
+                    { className: 'data-highlight' },
+                    React.createElement('span', null, data.nombre),
+                    React.createElement('span', null, data.apellido)
+                  )
+                )
+              : React.createElement(
+                  'p',
+                  { className: 'empty-state' },
+                  'Aún no recibo datos de mi hermano.'
+                )
+          );
+        };
+
+        var Parent = function () {
+          var _useState2 = useState({ nombre: '', apellido: '' }),
+            siblingData = _useState2[0],
+            setSiblingData = _useState2[1];
+
+          return React.createElement(
+            'div',
+            { className: 'container' },
+            React.createElement(
+              'header',
+              null,
+              React.createElement('h1', null, 'Comunicación entre hermanos')
+            ),
+            React.createElement(SiblingOne, { onSend: setSiblingData }),
+            React.createElement(SiblingTwo, { data: siblingData })
+          );
+        };
+
+        var rootElement = document.getElementById('root');
+        var root = ReactDOM.createRoot(rootElement);
+        root.render(React.createElement(Parent));
+      })();
+    </script>
+  </body>
+</html>
+

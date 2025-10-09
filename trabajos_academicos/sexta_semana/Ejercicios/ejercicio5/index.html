@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Estudiantes</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+    const students = [
+      { id: 1, name: "Gian", city: "Huancayo" },
+      { id: 2, name: "Jim", city: "El Tambo" },
+      { id: 3, name: "Elvis", city: "Pilcomayo" },
+      { id: 4, name: "Gianella", city: "Chilca" }
+    ];
+
+    const StudentsTableHeader = () => (
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Ciudad</th>
+        </tr>
+      </thead>
+    );
+
+    const StudentsTableRow = ({ student }) => (
+      <tr>
+        <td>{student.id}</td>
+        <td>{student.name}</td>
+        <td>{student.city}</td>
+      </tr>
+    );
+
+    const StudentsTableBody = ({ data }) => (
+      <tbody>
+        {data.map((student) => (
+          <StudentsTableRow key={student.id} student={student} />
+        ))}
+      </tbody>
+    );
+
+    const StudentsTable = ({ data }) => (
+      <table className="students-table">
+        <StudentsTableHeader />
+        <StudentsTableBody data={data} />
+      </table>
+    );
+
+    const App = () => (
+      <main className="app-container">
+        <h1>Listado de estudiantes</h1>
+        <StudentsTable data={students} />
+      </main>
+    );
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+</html>

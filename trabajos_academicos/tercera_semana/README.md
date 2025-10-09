@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Semana 3 — Práctica Calificada 2: Bootstrap y Tailwind CSS  
 **Bootstrap · Tailwind · componentes · utilidades · responsive**
 

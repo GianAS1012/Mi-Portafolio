@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Semana 5 — Práctica · Instalación Vite · React · Next.js  
 **Vite · React · Next.js · npm**
 

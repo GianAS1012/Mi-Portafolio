@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Semana 6 — Fundamentos y Componentes de React (práctica)  
 **React · componentes · props · JSX**
 

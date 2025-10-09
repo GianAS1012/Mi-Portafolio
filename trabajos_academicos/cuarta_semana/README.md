@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Semana 4 — JavaScript básico y avanzado (práctica) 
 **JavaScript · DOM · eventos · animaciones**
 

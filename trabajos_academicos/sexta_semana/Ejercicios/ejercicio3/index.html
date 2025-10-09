@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Padre e Hijo</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f1f1f1;
+        margin: 0;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .app-container {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        width: min(480px, 100%);
+      }
+
+      .child-form {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      input[type='text'] {
+        flex: 1;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background: #2d78dd;
+        color: white;
+        font-weight: bold;
+      }
+
+      button:disabled {
+        background: #9bb7e5;
+        cursor: not-allowed;
+      }
+
+      .parent-output {
+        padding: 1rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/javascript">
+      (function () {
+        if (!window.React || !window.ReactDOM) {
+          const rootElement = document.getElementById('root');
+          rootElement.innerHTML =
+            '<p style="color:#c0392b;font-weight:bold;">No se pudieron cargar las dependencias de React. Verifica tu conexi&oacute;n a internet o abre este archivo desde un servidor local.</p>';
+          return;
+        }
+
+        const { useState } = React;
+
+        const Child = ({ onSend }) => {
+          const [message, setMessage] = useState('');
+
+          const handleSubmit = (event) => {
+            event.preventDefault();
+            const trimmed = message.trim();
+
+            if (!trimmed) {
+              return;
+            }
+
+            onSend(trimmed);
+            setMessage('');
+          };
+
+          const isDisabled = message.trim().length === 0;
+
+          return React.createElement(
+            'form',
+            { className: 'child-form', onSubmit: handleSubmit },
+            React.createElement('input', {
+              type: 'text',
+              placeholder: 'Escribe un mensaje para el padre',
+              value: message,
+              onChange: (event) => setMessage(event.target.value),
+            }),
+            React.createElement(
+              'button',
+              { type: 'submit', disabled: isDisabled },
+              'Enviar'
+            )
+          );
+        };
+
+        const Parent = () => {
+          const [childMessage, setChildMessage] = useState('');
+
+          return React.createElement(
+            'div',
+            { className: 'app-container' },
+            React.createElement('h1', null, 'Comunicacion Padre <-> Hijo'),
+            React.createElement(Child, { onSend: setChildMessage }),
+            React.createElement(
+              'section',
+              { className: 'parent-output' },
+              React.createElement('h2', null, 'Mensaje desde el hijo:'),
+              childMessage
+                ? React.createElement('p', null, childMessage)
+                : React.createElement(
+                    'p',
+                    null,
+                    'El hijo aun no envia mensajes.'
+                  )
+            )
+          );
+        };
+
+        const rootElement = document.getElementById('root');
+        const root = ReactDOM.createRoot(rootElement);
+        root.render(React.createElement(Parent));
+      })();
+    </script>
+  </body>
+</html>

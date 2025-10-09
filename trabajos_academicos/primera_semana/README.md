@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Semana 1 — Introducción  
 **presentación · entorno · git básico**
 

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Semana 2 — HTML básico y avanzado · CSS básico y avanzado  
 **HTML · CSS · semántica · responsive**
 
