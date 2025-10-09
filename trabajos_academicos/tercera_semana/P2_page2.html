@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>page02.html – Cards con slideshow</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .w-200{width:200px}.h-120{height:120px}
+    .w-250{width:250px}.h-200{height:200px}
+  </style>
+</head>
+<body class="min-h-screen bg-neutral-100 text-neutral-900">
+<main class="max-w-7xl mx-auto p-6">
+  <h1 class="text-2xl font-semibold mb-6">Ejercicio 3</h1>
+
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+    <!-- =================== a) PLAYAS (con slideshow + numeración ascendente) =================== -->
+    <div>
+      <h2 class="text-lg font-semibold mb-3">a) Top 10 playas del Perú</h2>
+
+      <div class="flex flex-wrap gap-[10px]">
+
+        <!-- ==== CARD PLAYA – DUPLICADAS (1..10) ==== -->
+        <!-- 1 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <!-- Rotator con 4 imágenes (separadas por |) -->
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop|data:image/jpeg;base64,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|https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 1</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Máncora</p><p class="text-neutral-300">Piura, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1468581264429-2548ef9eb732?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 2</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Vichayito</p><p class="text-neutral-300">Piura, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 3</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Punta Sal</p><p class="text-neutral-300">Tumbes, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1468581264429-2548ef9eb732?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1501959915551-4e8a04a3b4e7?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 4</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Huanchaco</p><p class="text-neutral-300">La Libertad, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 5</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Lobitos</p><p class="text-neutral-300">Piura, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 6</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Paracas</p><p class="text-neutral-300">Ica, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1468581264429-2548ef9eb732?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1501959915551-4e8a04a3b4e7?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 7</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Cerro Azul</p><p class="text-neutral-300">Lima, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 8</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Asia</p><p class="text-neutral-300">Cañete, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 9</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Punta Hermosa</p><p class="text-neutral-300">Lima, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="w-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden">
+          <div class="relative w-full h-120 js-rotator" 
+               data-images="https://images.unsplash.com/photo-1501959915551-4e8a04a3b4e7?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=800&auto=format&fit=crop|https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=800&auto=format&fit=crop">
+            <img class="rot-a absolute inset-0 w-full h-full object-cover transition-opacity duration-700" />
+            <img class="rot-b absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0" />
+            <div class="absolute bottom-2 left-3 right-3 text-[15px] font-semibold drop-shadow">Top 10 Peruvian beaches</div>
+          </div>
+          <div class="p-4 space-y-2">
+            <p class="text-xs uppercase tracking-wide text-neutral-300">Número 10</p>
+            <div class="text-sm leading-snug">
+              <p class="font-medium">Cabo Blanco</p><p class="text-neutral-300">Piura, Perú</p>
+            </div>
+            <div class="pt-2 flex gap-5 text-[13px] font-semibold">
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">SHARE</button>
+              <button class="px-1.5 py-0.5 rounded hover:bg-neutral-500/30 transition">EXPLORE</button>
+            </div>
+          </div>
+        </article>
+        <!-- ==== FIN 10 PLAYAS ==== -->
+
+      </div>
+    </div>
+
+      <!-- =================== COLUMNA B: CIUDADES =================== -->
+      <div>
+        <h2 class="text-lg font-semibold mb-3">b) Top 10 ciudades del Perú</h2>
+
+        <!-- Contenedor con FLEXBOX, WRAP y separación de 5px -->
+        <div class="flex flex-wrap gap-[5px]">
+
+          <!-- ===== CARD CIUDAD (reusar 10 veces) ===== -->
+          <!-- 1 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Lima</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span>
+                <span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold leading-none">64°F</div>
+              <div class="text-5xl select-none">🌀</div>
+            </div>
+
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>123 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>48%</span></div>
+            </div>
+
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 2 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Arequipa</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">61°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>90 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>35%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-top border-neutral-700 hover:bg-neutral-500/30 transition border-t">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 3 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Cusco</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">57°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>60 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>52%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 4 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Trujillo</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">66°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>75 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>41%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 5 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Piura</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">72°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>80 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>28%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 6 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Chiclayo</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">68°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>77 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>39%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 7 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Iquitos</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">79°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>70 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>62%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 8 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Tacna</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">60°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>55 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>22%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 9 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Puno</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">55°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>65 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>50%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+
+          <!-- 10 -->
+          <article class="w-250 h-200 bg-neutral-900 text-neutral-100 rounded-xl shadow-md overflow-hidden flex flex-col">
+            <div class="p-4 pb-2">
+              <h3 class="text-base font-semibold">Huancayo</h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-rose-300">
+                <span class="text-xs">⚠</span><span class="opacity-90">Extreme Weather Alert</span>
+              </div>
+            </div>
+            <div class="px-4 flex-1 flex items-center justify-between">
+              <div class="text-4xl font-semibold">58°F</div>
+              <div class="text-5xl">🌀</div>
+            </div>
+            <div class="px-4 pt-2 pb-0 text-xs text-neutral-300 flex items-center justify-between">
+              <div class="flex items-center gap-1">💨 <span>62 km/h</span></div>
+              <div class="flex items-center gap-1">🌧️ <span>37%</span></div>
+            </div>
+            <button class="mt-3 w-full text-left px-4 py-3 text-sm font-semibold tracking-wide border-t border-neutral-700 hover:bg-neutral-500/30 transition">
+              FULL REPORT
+            </button>
+          </article>
+          <!-- ===== FIN 10 CARDS CIUDADES ===== -->
+
+         </div>
+    </div>
+  </section>
+</main>
+
+<!-- ========== JS: rotador de 4 imágenes por card ========== -->
+<script>
+  // Tiempo entre cambios (ms)
+  const INTERVALO = 2800;
+
+  document.querySelectorAll('.js-rotator').forEach((box) => {
+    const urls = (box.dataset.images || '').split('|').map(s => s.trim()).filter(Boolean);
+    if (urls.length === 0) return;
+
+    const imgA = box.querySelector('.rot-a');
+    const imgB = box.querySelector('.rot-b');
+
+    let idx = 0, mostrandoA = true;
+    imgA.src = urls[0];
+    imgB.src = urls[(idx+1) % urls.length];
+
+    // Pre-carga restante
+    urls.forEach(u => { const i = new Image(); i.src = u; });
+
+    setInterval(() => {
+      idx = (idx + 1) % urls.length;
+      if (mostrandoA) {
+        imgB.src = urls[idx];
+        imgB.classList.remove('opacity-0');
+        imgA.classList.add('opacity-0');
+      } else {
+        imgA.src = urls[idx];
+        imgA.classList.remove('opacity-0');
+        imgB.classList.add('opacity-0');
+      }
+      mostrandoA = !mostrandoA;
+    }, INTERVALO);
+  });
+</script>
+</body>
+</html>

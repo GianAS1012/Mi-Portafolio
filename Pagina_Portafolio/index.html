@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- ICONOS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="./public/style.css">
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="./public/images/favicon.png" type="image/x-icon">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Portafolio | Gian Janampa</title>
+</head>
+<body>
+    <div class="container">
+        <!-- --------------- HEADER --------------- -->
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Gian Janampa</p>
+                <span>.</span>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#inicio" class="nav-link active-link">Inicio</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#sobreMi" class="nav-link">Sobre mi</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#temas" class="nav-link">Temas</a>
+                        <div class="circle"></div>
+                    </li>   
+                    <li class="nav_list">
+                        <a href="#reflexiones" class="nav-link">Reflexiones</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!-- -------------- MAIN ---------------- -->
+        <main class="wrapper">
+            <!-- -------------- FEATURED BOX ---------------- -->
+            <section class="featured-box" id="inicio">
+                <div class="featured-text">
+                    <div class="featured-text-card">
+                        <span>Hola, Yo soy</span>
+                    </div>
+                    <div class="featured-name">
+                        <p><span class="nameText"> Gian Alessandro Janampa Choccelahua </span> <br> Desarrollador <br><span class="typedText"></span></p>
+                    </div>
+                    <div class="featured-text-info">
+                        <p>Soy Gian Alessandro Janampa Choccelahua, estudiante de ingenieria de sistemas enfocado en construccion de experiencias web dinamicas. Me apasiona aprender nuevas herramientas y compartir proyectos que conecten ideas con soluciones reales.</p>
+                    </div>
+                    <div class="featured-text-btn">
+                        <button class="btn blue-btn" onclick="document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });">Contactame</button>
+                        <button class="btn" onclick="descargarCV()" >Descargar CV <i class="uil uil-file-alt"></i>
+                        </button>
+                    </div>
+                    <div class="social_icons">
+                        <div class="icon" onclick="redireccionarInstagram() "><i class="uil uil-instagram"></i></div>
+                        <div class="icon" onclick="redireccionarLinkedIn()"><i class="uil uil-linkedin-alt"></i></div>
+                        <div class="icon" onclick="redireccionarGitHub()"><i class="uil uil-github-alt"></i></div>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <div class="image">
+                        <img src="./public/images/avatar.jpg" alt="avatar">
+                    </div>
+                </div>
+            </section>
+            <!-- -------------- sobreMi BOX ---------------- -->
+            <section class="section" id="sobreMi">
+                <div class="top-header">
+                    <h1>Acerca de mi</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="sobreMi-info">
+                        <p class="aboutMe">Soy Gian Alessandro Janampa Choocelahua, estudiante de ingenieria de sistemas que registra su camino en el desarrollo web. Experimento con editores, frameworks CSS y JavaScript para crear interfaces limpias y dinamicas, siempre buscando transformar cada practica en un proyecto util para mi comunidad.</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Frontend</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>Bootstrap</span>
+                                <span>Tailwind CSS</span>
+                                <span>Responsive design</span>
+                                <span>Animaciones CSS</span>
+                                <span>React.js</span>
+                                <span>Next.js</span>
+                                <span>Vite</span>
+                            </div>
+                        </div>
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Backend y Datos</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>Python</span>
+                                <span>Flask / FastAPI</span>
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>SQL</span>
+                                <span>Pandas / NumPy / Matplotlib</span>
+                                <span>ReportLab</span>
+                                <span>Integración de API REST</span>
+                            </div>
+                        </div>
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Herramientas y entorno</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>Visual Studio Code</span>
+                                <span>Emmet / Prettier</span>
+                                <span>SPSS</span>
+                                <span>Excel</span>
+                                <span>Documentación técnica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- -------------- TEMAS BOX ---------------- -->
+            <section class="section" id="temas">
+                <div class="table-container">
+                    <h1>Tabla de temas y objetivos</h1>
+                    <table class="topics-table">
+                        <thead>
+                            <tr>
+                                <th>Semana</th>
+                                <th>Tema</th>
+                                <th>Objetivo</th>
+                                <th>Repositorio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Reemplaza los valores de href con la carpeta correspondiente en tu repositorio -->
+                            <tr>
+                                <td>1</td>
+                                <td>Introduccion y uso de Visual Studio Code</td>
+                                <td>Usar adecuadamente Visual Studio Code y sus atajos, aplicando Emmet para optimizar la escritura de HTML y CSS.</td>
+                                <td><a class="topic-link" href="https://github.com/GianAS1012/Mi-Portafolio/tree/af6d391c36480d7d56c0f55a935aa1461f3ea643/trabajos_academicos/primera_semana" target="_blank" rel="noopener noreferrer">Abrir semana</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>HTML y CSS - Estructuras, estilos y diseno web</td>
+                                <td>Aplicar HTML y CSS para estructurar, disenar y personalizar sitios web, explorando diseno responsive y animaciones.</td>
+                                <td><a class="topic-link" href="https://github.com/GianAS1012/Mi-Portafolio/tree/af6d391c36480d7d56c0f55a935aa1461f3ea643/trabajos_academicos/segunda_semana" target="_blank" rel="noopener noreferrer">Abrir semana</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Frameworks CSS: Bootstrap y Tailwind</td>
+                                <td>Utilizar Bootstrap y Tailwind para crear interfaces modernas, responsivas y con componentes reutilizables.</td>
+                                <td><a class="topic-link" href="https://github.com/GianAS1012/Mi-Portafolio/tree/af6d391c36480d7d56c0f55a935aa1461f3ea643/trabajos_academicos/tercera_semana" target="_blank" rel="noopener noreferrer">Abrir semana</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>JavaScript: Ruleta y sorteo de equipos</td>
+                                <td>Desarrollar una aplicacion dinamica que combine DOM, eventos de teclado y animaciones para generar una ruleta interactiva.</td>
+                                <td><a class="topic-link" href="https://github.com/GianAS1012/Mi-Portafolio/tree/af6d391c36480d7d56c0f55a935aa1461f3ea643/trabajos_academicos/cuarta_semana" target="_blank" rel="noopener noreferrer">Abrir semana</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Instalacion de Vite, React y Next.js</td>
+                                <td>Comprender la instalacion, configuracion y flujo de trabajo de proyectos con Vite, React y Next.js.</td>
+                                <td><a class="topic-link" href="https://github.com/GianAS1012/Mi-Portafolio/tree/af6d391c36480d7d56c0f55a935aa1461f3ea643/trabajos_academicos/quinta_semana" target="_blank" rel="noopener noreferrer">Abrir semana</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Fundamentos y componentes de React</td>
+                                <td>Crear aplicaciones en React usando componentes, props, children y comunicacion entre componentes.</td>
+                                <td><a class="topic-link" href="https://github.com/GianAS1012/Mi-Portafolio/tree/af6d391c36480d7d56c0f55a935aa1461f3ea643/trabajos_academicos/sexta_semana" target="_blank" rel="noopener noreferrer">Abrir semana</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- -------------- REFLEXIONES BOX ---------------- -->
+            <section class="section" id="reflexiones">
+                <div class="top-header">
+                    <h1>Reflexiones</h1>
+                </div>
+                <div class="reflexiones-container">
+                    <article class="reflexion">
+                        <h2>Semana 1 - Introduccion y Uso de Visual Studio Code</h2>
+                        <p>Aprendi a manejar Visual Studio Code como entorno de desarrollo principal, aprovechando el plugin Emmet para escribir codigo HTML y CSS mas rapido. El uso de atajos de teclado mejoro significativamente mi productividad, permitiendome trabajar de forma mas fluida y profesional.</p>
+                    </article>
+                    <article class="reflexion">
+                        <h2>Semana 2 - HTML y CSS: Estructuras y Estilos</h2>
+                        <p>Durante esta semana consolide mis conocimientos de HTML5 y CSS3, creando paginas web estructuradas, limpias y visualmente agradables. Aprendi a implementar disenos responsive, aplicar animaciones CSS y mejorar la experiencia visual de las interfaces, base esencial para integrar frameworks mas avanzados.</p>
+                    </article>
+                    <article class="reflexion">
+                        <h2>Semana 3 - Frameworks CSS: Bootstrap y Tailwind</h2>
+                        <p>Trabaje con Bootstrap y Tailwind CSS, dos frameworks que facilitan el diseno web profesional. Con Bootstrap entendi el sistema de grillas y componentes predefinidos, mientras que con Tailwind domine las clases utilitarias para personalizar cada elemento sin escribir CSS adicional. La practica incluyo cards animadas, formularios, sliders RGB y galeria responsive.</p>
+                    </article>
+                    <article class="reflexion">
+                        <h2>Semana 4 - JavaScript: Ruleta y Sorteo de Equipos</h2>
+                        <p>Desarrolle una ruleta interactiva controlada por eventos de teclado, con animaciones dinamicas, colores aleatorios y sorteo automatico de equipos. Aprendi a manipular el DOM, crear y modificar elementos en tiempo real y organizar funciones de JavaScript de forma modular.</p>
+                    </article>
+                    <article class="reflexion">
+                        <h2>Semana 5 - Instalacion de Vite, React y Next.js</h2>
+                        <p>Explore el entorno de Vite para crear proyectos React y Next.js con alto rendimiento. Comprendi la estructura base de un proyecto React y las diferencias entre React tradicional y Next.js, especialmente en la generacion estatica y el renderizado del lado del servidor.</p>
+                    </article>
+                    <article class="reflexion">
+                        <h2>Semana 6 - Fundamentos y Componentes de React</h2>
+                        <p>Profundice en la creacion de componentes funcionales, el uso de props, children y la comunicacion entre componentes.</p>
+                        <ul class="reflexion-list">
+                            <li>Aplicacion con siete componentes responsivos.</li>
+                            <li>Componentes anidados que muestran objetos de datos.</li>
+                            <li>Comunicacion padre e hijo gestionada con useState.</li>
+                            <li>Renderizado de listas utilizando el metodo map.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            
+        <!-- --------------- FOOTER --------------- -->
+        <footer>
+            <div class="top-footer">
+                <p>Gian Alessandro Janampa Choccelahua.</p>
+            </div>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="#inicio">Inicio</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#sobreMi">Sobre mi</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#temas">Temas</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#reflexiones">Reflexiones</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <div class="icon" onclick="redireccionarInstagram() "><i class="uil uil-instagram"></i></div>
+                <div class="icon" onclick="redireccionarLinkedIn()"><i class="uil uil-linkedin-alt"></i></div>
+                <div class="icon" onclick="redireccionarGitHub()"><i class="uil uil-github-alt"></i></div>
+            </div>
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#inicio" style="text-decoration: none;">Gian Alessandro Janampa Choccelahua</a> - All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+	<!-- ----- MAIN JS ----- -->
+    <script src="./public/main.js"></script>
+</body>
+</html>
+
+
